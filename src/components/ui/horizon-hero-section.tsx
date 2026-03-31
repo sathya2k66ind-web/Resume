@@ -600,14 +600,27 @@ export const Component = () => {
     }
 
     if (subtitleRef.current) {
+      // Keep subtitle visible on page, fade on scroll
+      gsap.to(subtitleRef.current, {
+        scrollTrigger: {
+          trigger: subtitleRef.current,
+          start: "top 30%",
+          end: "bottom 10%",
+          scrub: 1,
+          markers: false
+        },
+        opacity: 0,
+        duration: 0.5
+      });
+      
+      // Initial fade-in on load
       const subtitleLines = subtitleRef.current.querySelectorAll('.subtitle-line');
       tl.from(subtitleLines, {
-        y: 50,
         opacity: 0,
-        duration: 1,
-        stagger: 0.2,
-        ease: "power3.out"
-      }, "-=0.8");
+        duration: 0.8,
+        stagger: 0.15,
+        ease: "power2.out"
+      });
     }
 
     if (scrollProgressRef.current) {
