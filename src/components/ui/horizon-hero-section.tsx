@@ -640,6 +640,22 @@ export const Component = () => {
         subtitleRef.current.style.opacity = String(titleOpacity);
       }
 
+      // Add animation to visible content sections
+      const contentSections = document.querySelectorAll('.content-section');
+      contentSections.forEach(section => {
+        const rectScroll = section.getBoundingClientRect();
+        // Section is in view when it's in the viewport
+        const isInView = rectScroll.top < windowHeight * 0.75 && rectScroll.bottom > windowHeight * 0.25;
+        
+        if (isInView) {
+          section.classList.add('in-view');
+          const card = section.querySelector('.glass-card-dark');
+          if (card) {
+            (card as HTMLElement).style.animationPlayState = 'running';
+          }
+        }
+      });
+
       const { current: refs } = threeRefs;
       
       const totalProgress = progress * totalSections;

@@ -326,15 +326,21 @@ body {
 .scroll-sections {
   position: relative;
   z-index: 10;
-  padding-top: 140vh;
+  padding-top: 100vh;
 }
 
 .content-section {
-  min-height: 100vh;
+  min-height: 120vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
+  opacity: 0.8;
+  transition: opacity 0.8s ease;
+}
+
+.content-section.in-view {
+  opacity: 1;
 }
 
 /* Glass Card - Ultra Light & Transparent */
@@ -346,6 +352,19 @@ body {
   padding: 3rem;
   width: 100%;
   max-width: 1200px;
+  animation: slideUpIn 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  opacity: 0;
+}
+
+@keyframes slideUpIn {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Modern Section Title */
@@ -358,6 +377,18 @@ body {
   text-align: center;
   font-family: 'Outfit', sans-serif;
   opacity: 0.9;
+  animation: fadeInDown 0.8s ease-out forwards;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 0.9;
+    transform: translateY(0);
+  }
 }
 
 /* Hover Text - Light */
@@ -466,6 +497,24 @@ body {
   border-radius: 18px;
   padding: 1.5rem;
   transition: all 0.4s ease;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.project-card-compact:nth-child(1) { animation-delay: 0.1s; }
+.project-card-compact:nth-child(2) { animation-delay: 0.2s; }
+.project-card-compact:nth-child(3) { animation-delay: 0.3s; }
+.project-card-compact:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .project-card-compact:hover {
@@ -598,6 +647,14 @@ body {
   border-radius: 18px;
   padding: 1.75rem;
   transition: all 0.4s ease;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.research-card-full:nth-child(1) { animation-delay: 0.1s; }
+.research-card-full:nth-child(2) { animation-delay: 0.2s; }
+.research-card-full:nth-child(3) { animation-delay: 0.3s; }
+.research-card-full:nth-child(4) { animation-delay: 0.4s; }
 }
 
 .research-card-full:hover {
@@ -704,7 +761,16 @@ body {
 
 .skill-category {
   text-align: center;
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
 }
+
+.skill-category:nth-child(1) { animation-delay: 0.1s; }
+.skill-category:nth-child(2) { animation-delay: 0.2s; }
+.skill-category:nth-child(3) { animation-delay: 0.3s; }
+.skill-category:nth-child(4) { animation-delay: 0.4s; }
+.skill-category:nth-child(5) { animation-delay: 0.5s; }
+.skill-category:nth-child(6) { animation-delay: 0.6s; }
 
 .skill-category-title {
   font-size: 0.85rem;
