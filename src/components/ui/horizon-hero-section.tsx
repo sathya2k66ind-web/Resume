@@ -576,19 +576,6 @@ export const Component = () => {
     }
 
     if (titleRef.current) {
-      // Keep title visible without fast animation
-      gsap.to(titleRef.current, {
-        scrollTrigger: {
-          trigger: titleRef.current,
-          start: "top 40%",
-          end: "bottom 20%",
-          scrub: 1,
-          markers: false
-        },
-        opacity: 0,
-        duration: 0.5
-      });
-      
       // Initial fade-in on load - smooth entry
       const titleChars = titleRef.current.querySelectorAll('.title-char');
       tl.from(titleChars, {
@@ -600,19 +587,6 @@ export const Component = () => {
     }
 
     if (subtitleRef.current) {
-      // Keep subtitle visible on page, fade on scroll
-      gsap.to(subtitleRef.current, {
-        scrollTrigger: {
-          trigger: subtitleRef.current,
-          start: "top 30%",
-          end: "bottom 10%",
-          scrub: 1,
-          markers: false
-        },
-        opacity: 0,
-        duration: 0.5
-      });
-      
       // Initial fade-in on load
       const subtitleLines = subtitleRef.current.querySelectorAll('.subtitle-line');
       tl.from(subtitleLines, {
@@ -649,6 +623,23 @@ export const Component = () => {
       setScrollProgress(progress);
       const newSection = Math.min(Math.floor(progress * totalSections), totalSections - 1);
       setCurrentSection(newSection);
+
+      // Control title and subtitle opacity based on scroll
+      // Stay visible until 25% of scroll, then fade out
+      const fadeStartProgress = 0.25;
+      const fadeEndProgress = 0.35;
+      let titleOpacity = 1;
+      
+      if (progress >= fadeStartProgress) {
+        titleOpacity = Math.max(0, 1 - (progress - fadeStartProgress) / (fadeEndProgress - fadeStartProgress));
+      }
+      
+      if (titleRef.current) {
+        titleRef.current.style.opacity = String(titleOpacity);
+      }
+      if (subtitleRef.current) {
+        subtitleRef.current.style.opacity = String(titleOpacity);
+      }
 
       const { current: refs } = threeRefs;
       
