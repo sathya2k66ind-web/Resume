@@ -576,25 +576,24 @@ export const Component = () => {
     }
 
     if (titleRef.current) {
-      // Initial fade-in on load - smooth entry
-      const titleChars = titleRef.current.querySelectorAll('.title-char');
-      tl.from(titleChars, {
+      // Animate hero intro text on load
+      tl.from(titleRef.current, {
         opacity: 0,
-        duration: 0.8,
-        stagger: 0.02,
+        y: 20,
+        duration: 1,
         ease: "power2.out"
       });
     }
 
     if (subtitleRef.current) {
-      // Initial fade-in on load
-      const subtitleLines = subtitleRef.current.querySelectorAll('.subtitle-line');
-      tl.from(subtitleLines, {
+      // Animate contact icons
+      tl.from(subtitleRef.current.querySelectorAll('.contact-icon-link'), {
         opacity: 0,
+        scale: 0.8,
         duration: 0.8,
-        stagger: 0.15,
-        ease: "power2.out"
-      });
+        stagger: 0.1,
+        ease: "back.out"
+      }, "-=0.5");
     }
 
     if (scrollProgressRef.current) {
@@ -717,18 +716,12 @@ export const Component = () => {
 
       {/* Section 1: Contact Hero */}
       <div className="hero-content">
-        <h1 ref={titleRef} className="hero-title-large">
-          {splitTitle(resumeData.name)}
-        </h1>
+        <div ref={titleRef} className="hero-intro-text">
+          <h1 className="intro-name">{resumeData.name}</h1>
+          <p className="intro-tags">CS Freshman | Full-Stack Development | AI/ML | DAW's Research | Graphic Designer</p>
+        </div>
         
         <div ref={subtitleRef} className="hero-subtitle">
-          <p className="subtitle-line glass-text">
-            {resumeData.title}
-          </p>
-          <p className="subtitle-line glass-text location-text">
-            {resumeData.contact.location}
-          </p>
-          
           {/* Contact Icons */}
           <div className="contact-icons">
             <a 
