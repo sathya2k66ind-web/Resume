@@ -576,14 +576,27 @@ export const Component = () => {
     }
 
     if (titleRef.current) {
+      // Keep title visible without fast animation
+      gsap.to(titleRef.current, {
+        scrollTrigger: {
+          trigger: titleRef.current,
+          start: "top 40%",
+          end: "bottom 20%",
+          scrub: 1,
+          markers: false
+        },
+        opacity: 0,
+        duration: 0.5
+      });
+      
+      // Initial fade-in on load - smooth entry
       const titleChars = titleRef.current.querySelectorAll('.title-char');
       tl.from(titleChars, {
-        y: 200,
         opacity: 0,
-        duration: 1.5,
-        stagger: 0.05,
-        ease: "power4.out"
-      }, "-=0.5");
+        duration: 0.8,
+        stagger: 0.02,
+        ease: "power2.out"
+      });
     }
 
     if (subtitleRef.current) {

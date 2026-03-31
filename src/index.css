@@ -138,28 +138,30 @@ body {
   max-width: 1200px;
 }
 
-/* Large Title for Contact Hero - Modern & Light */
+/* Large Title for Contact Hero - Dark Color */
 .hero-title-large {
   font-size: clamp(3rem, 12vw, 9rem);
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 0.95;
   margin-bottom: 1.5rem;
-  color: #fff;
+  color: #1a1a2e;
   font-family: 'Outfit', sans-serif;
+  opacity: 1;
+  transition: opacity 0.6s ease;
 }
 
 .hero-title-large .title-char {
   display: inline-block;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: default;
-  opacity: 0.95;
+  opacity: 1;
 }
 
 .hero-title-large .title-char:hover {
   transform: translateY(-15px) scale(1.15);
-  color: #c4b5fd;
-  text-shadow: 0 0 60px rgba(139, 92, 246, 0.6);
+  color: #0f3460;
+  text-shadow: 0 0 60px rgba(15, 52, 96, 0.3);
 }
 
 /* Hero Subtitle - Light & Airy */
