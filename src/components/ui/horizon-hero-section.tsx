@@ -624,9 +624,9 @@ export const Component = () => {
       setCurrentSection(newSection);
 
       // Control title and subtitle opacity based on scroll
-      // Stay visible until 25% of scroll, then fade out
-      const fadeStartProgress = 0.25;
-      const fadeEndProgress = 0.35;
+      // Fade out smoothly as education section comes into view
+      const fadeStartProgress = 0.12;
+      const fadeEndProgress = 0.25;
       let titleOpacity = 1;
       
       if (progress >= fadeStartProgress) {
