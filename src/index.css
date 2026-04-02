@@ -329,6 +329,12 @@ body {
   padding-top: 100vh;
 }
 
+/* Education Section - Darker Background */
+.content-section:first-of-type .glass-card-dark {
+  background: rgba(255, 255, 255, 0.08) linear-gradient(135deg, rgba(139, 92, 246, 0.03) 0%, rgba(236, 72, 153, 0.02) 100%);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
 .content-section {
   min-height: 120vh;
   display: flex;
@@ -425,7 +431,7 @@ body {
 
 .education-content .institution {
   font-size: clamp(0.95rem, 1.8vw, 1.2rem);
-  color: rgba(167, 139, 250, 0.9);
+  color: rgba(255, 255, 255, 0.95);
   margin-bottom: 0.5rem;
   font-weight: 400;
 }

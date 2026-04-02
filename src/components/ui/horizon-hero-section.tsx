@@ -55,16 +55,16 @@ const resumeData = {
   education: {
     degree: "B.E. Computer Science & Engineering",
     institution: "Kumaraguru College of Technology, Coimbatore",
-    duration: "2025 – 2029",
+    duration: "2026 – 2030",
     cgpa: "8.16 Provisional (Sem 1)",
-    current: "Semester 2, 2025–26",
+    current: "Semester 2, 2026–27",
     coursework: ["Multivariate Calculus", "Python Programming", "Embedded Systems", "Data Structures & Algorithms"]
   },
   projects: [
     {
       title: "Network Intrusion Detection System",
       category: "ML / Cybersecurity",
-      year: "2025",
+      year: "2026",
       tech: ["Python", "Scikit-learn", "Random Forest", "Flask", "Streamlit"],
       highlights: [
         "Trained Random Forest classifier with >98% test accuracy",
@@ -75,7 +75,7 @@ const resumeData = {
     {
       title: "YouTube Comment Sentiment Analyzer",
       category: "NLP / Full-Stack",
-      year: "2025",
+      year: "2026",
       tech: ["Python", "RoBERTa", "YouTube Data API v3", "Flask", "Streamlit"],
       highlights: [
         "Upgraded from TextBlob to fine-tuned RoBERTa transformer",
@@ -86,7 +86,7 @@ const resumeData = {
     {
       title: "Content-Based Recommendation System",
       category: "NLP / ML",
-      year: "2025",
+      year: "2026",
       tech: ["Python", "TF-IDF", "Cosine Similarity", "Streamlit"],
       highlights: [
         "Movie recommendation engine using TF-IDF vectorization",
@@ -97,7 +97,7 @@ const resumeData = {
     {
       title: "Slotify – Smart Parking App",
       category: "Full-Stack · Team Project",
-      year: "2024 – 2025",
+      year: "2025 – 2026",
       tech: ["React", "Vite", "Node.js", "Express", "MongoDB Atlas", "JWT"],
       highlights: [
         "QR-based vehicle entry with JWT-secured authentication",
@@ -119,7 +119,7 @@ const resumeData = {
       title: "Smart Parking System Using IoT & QR Code Integration",
       type: "Team Project",
       status: "Scopus-Targeted · In Progress",
-      year: "2025",
+      year: "2026",
       collaborators: "Co-authored with Rahul, Zaara, Akhshaya, Caroline, Jashan",
       description: "Documents architecture of a real-time campus parking management system: QR-based entry, live slot availability, and JWT-secured mobile access. Targets Scopus-indexed conference/journal."
     },
@@ -127,7 +127,7 @@ const resumeData = {
       title: "DAW Workflows & Cognitive Creativity in Trap/Hip-Hop Production",
       type: "Solo Research",
       status: "Solo · Scopus-Targeted",
-      year: "2024 – 2025",
+      year: "2025 – 2026",
       collaborators: "Target: IASPM Journal · Journal of Music, Technology & Education",
       description: "Solo literature review examining how Digital Audio Workstation design influences creative cognition in modern trap/hip-hop production. Passed AI-detection remediation (GPTZero: 70% → 6%)."
     }

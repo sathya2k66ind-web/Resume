@@ -1,5 +1,5 @@
-import { Component as HorizonHero } from "./components/ui/horizon-hero-section";
+import ShaderAnimationDemo from "./demos/shader-animation-demo";
 
 export default function App() {
-  return <HorizonHero />;
+  return <ShaderAnimationDemo />;
 }
