@@ -55,9 +55,9 @@ const resumeData = {
   education: {
     degree: "B.E. Computer Science & Engineering",
     institution: "Kumaraguru College of Technology, Coimbatore",
-    duration: "2026 – 2030",
+    duration: "2025 – 2029",
     cgpa: "8.16 Provisional (Sem 1)",
-    current: "Semester 2, 2026–27",
+    current: "Semester 2, 2025–26",
     coursework: ["Multivariate Calculus", "Python Programming", "Embedded Systems", "Data Structures & Algorithms"]
   },
   projects: [
